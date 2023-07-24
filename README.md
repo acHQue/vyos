@@ -48,6 +48,8 @@ Network: 2-4
 - set protocols static route 10.0.0.0/24 next-hop 10.0.0.5 distance 1 # Set on 002
 - set protocols static route 10.0.0.4/24 next-hop 10.0.0.5 distance 1
 - set protocols static route 10.0.0.8/24 next-hop 10.0.0.5 distance 1
+- set protocols static route 10.10.0.0/24 next-hop 10.0.0.5 distance 1
+- set protocols static route 10.30.0.0/24 next-hop 10.0.0.5 distance 1
 
 # 003
 - set protocols static route 10.0.0.0/24 next-hop 10.0.0.9 distance 1 # Set on 003
