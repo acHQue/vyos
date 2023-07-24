@@ -14,37 +14,37 @@ SSD/HDD: 2Gb
 Network: 2-4
 
 ### Instalation Commands 
-install image
+- install image
 
 ### Enter configuration mode
-conf
+- conf
 
 ### Configure Interfaces
-set interface ethernet eth0 address 10.0.0.1/30 # Setting an ip address
-del interface ethernet eth0 address 10.0.0.1/30 # deleting an ip address
+- set interface ethernet eth0 address 10.0.0.1/30 # Setting an ip address
+- del interface ethernet eth0 address 10.0.0.1/30 # deleting an ip address
 
 ### Routing
 # 000
-set protocols static route 10.30.0.0/24 next-hop 10.0.0.2 distance 1 # Set on 000
-set protocols static route 10.20.0.0/24 next-hop 10.0.0.6 distance 1
-set protocols static route 10.10.0.0/24 next-hop 10.0.0.10 distance 1
+- set protocols static route 10.30.0.0/24 next-hop 10.0.0.2 distance 1 # Set on 000
+- set protocols static route 10.20.0.0/24 next-hop 10.0.0.6 distance 1
+- set protocols static route 10.10.0.0/24 next-hop 10.0.0.10 distance 1
 
 # 001
-set protocols static route 10.0.0.0/24 next-hop 10.0.0.1 distance 1 # Set on 001 10.30.0.0/24
-set protocols static route 10.0.0.4/24 next-hop 10.0.0.1 distance 1
-set protocols static route 10.0.0.8/24 next-hop 10.0.0.1 distance 1
-set protocols static route 10.10.0.0/24 next-hop 10.0.0.5 distance 1
-set protocols static route 10.20.0.0/24 next-hop 10.0.0.5 distance 1
+- set protocols static route 10.0.0.0/24 next-hop 10.0.0.1 distance 1 # Set on 001 10.30.0.0/24
+- set protocols static route 10.0.0.4/24 next-hop 10.0.0.1 distance 1
+- set protocols static route 10.0.0.8/24 next-hop 10.0.0.1 distance 1
+- set protocols static route 10.10.0.0/24 next-hop 10.0.0.5 distance 1
+- set protocols static route 10.20.0.0/24 next-hop 10.0.0.5 distance 1
 
 # 002
-set protocols static route 10.0.0.0/24 next-hop 10.0.0.5 distance 1 # Set on 002
-set protocols static route 10.0.0.4/24 next-hop 10.0.0.5 distance 1
-set protocols static route 10.0.0.8/24 next-hop 10.0.0.5 distance 1
+- set protocols static route 10.0.0.0/24 next-hop 10.0.0.5 distance 1 # Set on 002
+- set protocols static route 10.0.0.4/24 next-hop 10.0.0.5 distance 1
+- set protocols static route 10.0.0.8/24 next-hop 10.0.0.5 distance 1
 
 # 003
-set protocols static route 10.0.0.0/24 next-hop 10.0.0.9 distance 1 # Set on 003
-set protocols static route 10.0.0.4/24 next-hop 10.0.0.9 distance 1
-set protocols static route 10.0.0.8/24 next-hop 10.0.0.9 distance 1
+- set protocols static route 10.0.0.0/24 next-hop 10.0.0.9 distance 1 # Set on 003
+- set protocols static route 10.0.0.4/24 next-hop 10.0.0.9 distance 1
+- set protocols static route 10.0.0.8/24 next-hop 10.0.0.9 distance 1
 
 
 ### SSH
@@ -55,11 +55,12 @@ set protocols static route 10.0.0.8/24 next-hop 10.0.0.9 distance 1
 
 ## IP Schema
 
-### 10.0.0.0/30 Network 1
-10.0.0.0 NA
-10.0.0.1 1st 000 vmnet 0
-10.0.0.2 2nd 001
-10.0.0.3 BC
+| ### 10.0.0.0/30 Network 1 |
+| ------------------------- |
+| 10.0.0.0 | NA |
+| 10.0.0.1 | 1st 000 vmnet 0 |
+| 10.0.0.2 | 2nd 001 |
+| 10.0.0.3 | BC |
 
 ### 10.0.0.4/30 Network 2
 10.0.0.4 NA
