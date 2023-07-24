@@ -16,12 +16,20 @@ Network: 2-4
 ### Instalation Commands 
 - install image
 
+#### Commands
+- show int
+- show ip route
+
 ### Enter configuration mode
 - conf
+#### Use commands inside conf mode
+- run sho ip route
+- run sho int
 
 ### Configure Interfaces
 - set interface ethernet eth0 address 10.0.0.1/30 # Setting an ip address
 - del interface ethernet eth0 address 10.0.0.1/30 # deleting an ip address
+- set interfaces ethernet eth0 description 'WAN or OUTSIDE' #https://support.vyos.io/en/support/solutions/articles/103000096320-ethernet-interfaces
 
 ### Routing
 # 000
@@ -45,6 +53,9 @@ Network: 2-4
 - set protocols static route 10.0.0.0/24 next-hop 10.0.0.9 distance 1 # Set on 003
 - set protocols static route 10.0.0.4/24 next-hop 10.0.0.9 distance 1
 - set protocols static route 10.0.0.8/24 next-hop 10.0.0.9 distance 1
+
+# Deleting Routes (use tab complete)
+- del
 
 
 ### SSH
